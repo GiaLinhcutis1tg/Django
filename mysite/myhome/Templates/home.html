@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Django</title>
+    <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+        }
+        
+        li {
+          float: left;
+        }
+        
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        li a:hover {
+          background-color: #111;
+        }
+        .dropbtn {
+  background-color: #323232;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #000000;
+}
+        </style>
+</head>
+<body>
+    <h1>Chào mừng bạn đã đến với "Thế giới di động"</h1>
+    <ul>
+        <li><a class="active" href="#home">Trang chủ</a></li>
+        <div class="dropdown">
+            <button class="dropbtn">Bán mọi thứ</button>
+            <div class="dropdown-content">
+            <a href="#">Điện thoại</a>
+            <a href="#">Máy tính</a>
+            <a href="#">Máy tính bảng</a>
+            </div>
+          </div>
+        <li><a href="#contact">Trợ giúp</a></li>
+      </ul>
+      <div class="gallery">
+        {%for i in 'ab'%}
+        <a target="_blank" href="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/289691/iphone-14-pro-vang-thumb-600x600.jpg">
+          <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/289691/iphone-14-pro-vang-thumb-600x600.jpg" alt="Cinque Terre" width="170" height="170">
+        </a>{% lorem 1 random %}
+        <div class="desc">Iphone 14</div>
+      </div>
+      {% endfor %}
+      <div class="gallery">
+        <a target="_blank" href="https://www.thegioididong.com/laptop/hp-pavilion-15-eg2034tx-i7-6k780pa?utm_flashsale=1">
+          <img src="https://www.thegioididong.com/laptop/hp-pavilion-15-eg2034tx-i7-6k780pa?utm_flashsale=1" alt="Cinque Terre" width="170" height="170">
+        </a>
+        <div class="desc">HP Pavilion</div>
+      </div>
+</body>
+</html>
